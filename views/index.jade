@@ -1,18 +1,17 @@
 header
+  .rethink.logo
   h1 Rethink Up
 
 section.hero
-  h2 Rethink DB as a service, at your service. Coming soon.
+  h2 RethinkDB as a service, at your service. Coming soon.
 
-.bleed
-  section.signup
-    include _signup
+section.signup.bleed
+  include _signup
 
-section.details
-  p Leggings semiotics salvia, chia cray Godard banjo kogi flexitarian next level fingerstache fanny pack. Distillery mixtape drinking vinegar +1, pug deep v polaroid before they sold out actually mumblecore you probably haven't heard of them. Cred banjo try-hard hoodie single-origin coffee whatever. Fap Williamsburg trust fund, Banksy lo-fi tousled polaroid kale chips VHS distillery Terry Richardson Thundercats. You probably haven't heard of them American Apparel chillwave whatever trust fund Pitchfork, jean shorts drinking vinegar artisan 8-bit. Austin post-ironic street art Tumblr, flannel chambray pug try-hard 90's occupy. Banh mi chia umami Odd Future fingerstache cred, kale chips deep v.
+section.about
+  include _about.md
 
-.bleed.footer
-  footer
-    span= "Brought to you by your friends at "
-    a(href="http://www.mojotech.com") MojoTech
-    span= "."
+footer.bleed
+  .mojotech.logo
+  :markdown
+    Brought to you by your friends at [MojoTech](http://www.mojotech.com "MojoTech").

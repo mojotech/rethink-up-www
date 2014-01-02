@@ -5,122 +5,173 @@ establish-baseline('normalize')
 
 text-selection(blue)
 
-*
-*:before
+*,
+*:before,
 *:after
-input
+  margin: 0
+  padding: 0
   box-sizing: border-box
 
-header
-section
+html
+  height: 100%
+
+body
+  position: relative
+  padding: 0 0 100px
+  min-height: 100%
+  text-align: center
+
+header,
+section,
 footer
-  width: 800px
-  margin: 0 auto
+  width: 960px
+  text-align: left
   padding: 0 80px
+  display: inline-block
 
 h1
   font-family: droid-serif
 
-h1
-h2
-h3
+h1, h2
   font-weight: normal
+
+h3
+  font-weight: 600
 
 a
   link()
 
-.bleed
-  height: 100px
-  background-color: light-grey
-
+//
 
 header
   h1
-    margin-left: -3px
+    margin-left: -2px
+    margin-bottom: 0
 
-  &:before
-    size: 38 32
-    content: ''
-    background-image: url('../img/rethink-up-logo.png')
-    background-size: 38px 32px
-    position: absolute
-    margin-top: 8px
-    margin-left: -55px
+  .rethink.logo
+    position:absolute
+    margin-top: 38px
+    margin-left: -58px
     transition-property: transform
     transition-duration: 500ms
 
-  &:hover:before
-    transform: translate(0, -5px)
+  &:hover
+    .rethink.logo
+      transform: translate(0, -5px)
 
-.footer
-  width: 100%
-  position: absolute
-  left: 0
-  bottom: 0
-
-footer
-  line-height: 100px
-  font-style: italic
-  color: gray
-
-  &:before
-    size: 46 40
-    content: ''
-    background-image: url('../img/mojotech-hex-logo.png')
-    background-size: 46px 40px
-    position: absolute
-    margin-top: 32px
-    margin-left: -60px
-    transition-property: transform
-    transition-duration: 500ms
-
-  &:hover:before
-    transform: rotate(360deg)
+section.hero
+  h2
+    margin-top: 21px
+    margin-bottom: 21px
 
 section.signup
   font-size: 1.17em
   line-height: 100px
-
-  .fields
-    position: relative
+  position: relative
 
   input:valid + label,
   input:focus + label
-    margin-left: -68px
+    margin-left: 10px
     color: dark-grey
 
   label
-    color grey
     position: absolute
     top: 0
     left: 0
-    margin-left: 10px
+    color grey
+    margin-left: 94px
     transition-property: color
     transition-property: margin-left
     transition-duration: 200ms
 
   .email
     size: 472 47
-    outline: none
-    font-size: 1em
-    border: 2px solid grey
-    border-radius: 3px
-    box-sizing: border-box
     margin-right: 20px
     padding-left: 12px
 
   .button
     size: 300 46
     background-color: red
-    border-radius: 3px
-    outline: 0
-    border: 0
-    font-size: 1em
-    font-weight: 400
     color: white
-    transition-property: background-color
-    transition-duration: 200ms
-
 
     &:hover
       background-color: dark-red
+
+section.about
+  group()
+
+  .subfeature
+    column(5)
+    height: 200px
+
+    &:nth-child(odd)
+      margin: 0 20px 0 0
+
+    &:nth-child(even)
+      margin: 0 0 0 20px
+
+footer
+  position: absolute
+  margin: 0 auto
+  left: 0
+  right: 0
+  bottom: 0
+  line-height: 100px
+  font-style: italic
+  color: gray
+
+  p
+    display: inline
+
+  .mojotech.logo
+    position: absolute
+    margin-top: 32px
+    margin-left: -60px
+    transition-property: transform
+    transition-duration: 500ms
+
+  &:hover
+    .mojotech.logo
+      transform: rotate(360deg)
+
+//
+
+.rethink.logo
+  size: 38 32
+  background-image: url('../img/rethink-up-logo.png')
+  background-size: 38px 32px
+
+.mojotech.logo
+  size: 46 40
+  background-image: url('../img/mojotech-hex-logo.png')
+  background-size: 46px 40px
+
+//
+
+.bleed:before
+  content: ''
+  height: 100px
+  width: 10000px
+  background-color: light-grey
+  display: block
+  position: absolute
+  left: -5000px
+  right: 0
+  z-index: -1
+
+//
+
+input[type="text"],
+input[type="email"]
+  outline: none
+  border: 2px solid grey
+  border-radius: 3px
+
+input[type="button"],
+input[type="submit"]
+  border-radius: 3px
+  outline: 0
+  border: 0
+  color: white
+  transition-property: background-color
+  transition-duration: 200ms
