@@ -14,7 +14,7 @@ layouts:
 # Locals will be made available on every page. They can be
 # variables or (coffeescript) functions.
 locals:
-  title: 'Hosted Rethink DB'
+  title: 'Cloud Hosted Rethink DB'
 
 # Precompiled template path, see http://roots.cx/docs/#precompile
 # templates: 'views/templates'

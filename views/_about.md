@@ -1,4 +1,4 @@
-At Rethink Up, our aim is to provide fast, stable, and cost-effective [RethinkDB](http://www.rethinkdb.com "RethinkDB") hosting.
+At Rethink Up, our aim is to provide fast, stable, and cost-effective [RethinkDB](http://www.rethinkdb.com "RethinkDB") cloud hosting.
 
 + **Save Time** - 
   Set up a RethinkDB instance with just a few clicks. Scale up with a few more. Spend more time building awesome products and less time worrying about your data.
