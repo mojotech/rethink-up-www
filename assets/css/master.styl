@@ -15,21 +15,34 @@ text-selection(blue)
 
 html
   height: 100%
+  overflow-x: hidden
 
 body
   position: relative
   padding: 0 0 100px
   min-height: 100%
   text-align: center
-  overflow-x: hidden
+  overflow: hidden
+
+  @media screen and (max-width: 480px)
+    font-size: 14px
+    line-height: 1.5em
+    padding: 0 0 65px
 
 header,
-section,
+section
 footer
   width: 960px
   text-align: left
   padding: 0 80px
   margin: 0 auto
+
+  @media screen and (max-width: 320px)
+    padding: 0 10px
+
+  @media screen and (max-width: 768px)
+    width: 100%
+    padding: 0 15px
 
 header
   display: inline-block
@@ -39,6 +52,7 @@ h1
 
 h1, h2
   font-weight: normal
+  line-height: 1.5em
 
 h3
   font-weight: 600
@@ -53,12 +67,23 @@ header
     margin-left: -2px
     margin-bottom: 0
 
+    @media screen and (max-width: 768px)
+      margin-left: 54px
+
   .rethink.logo
     position:absolute
     margin-top: 38px
     margin-left: -58px
     transition-property: transform
     transition-duration: 500ms
+
+    @media screen and (max-width: 480px)
+      margin-top: 24px
+      margin-left: 3px
+
+    @media screen and (max-width: 768px) and (min-width: 481px)
+      margin-top: 38px
+      margin-left: 3px
 
   &:hover
     .rethink.logo
@@ -79,6 +104,9 @@ section.signup
     margin-left: 10px
     color: dark-grey
 
+    @media screen and (max-width: 768px)
+      display: none
+
   label
     position: absolute
     top: 0
@@ -89,18 +117,55 @@ section.signup
     transition-property: margin-left
     transition-duration: 200ms
 
+    @media screen and (max-width: 768px)
+      margin-left: 32px
+
   .email
-    size: 472 47
+    size: 472px 47px
     margin-right: 20px
     padding-left: 12px
 
+    @media screen and (max-width: 768px)
+      width: 100%
+
   .button
-    size: 300 46
+    size: 300px 46px
     background-color: red
     color: white
 
     &:hover
       background-color: light-red
+
+    @media screen and (max-width: 768px)
+      width: 100%
+
+  @media screen and (max-width: 768px)
+    line-height: 64px
+
+
+section.about
+  .social
+    display: inline-block
+
+    .icons, em
+      float: left
+
+    .icons
+      opacity: 0.7
+      margin-left: 1em
+
+      @media screen and (max-width: 768px)
+        width: 100%
+        float: none
+        margin: 1.5em auto
+        display: inline-block
+
+    @media screen and (max-width: 768px)
+      text-align: center
+      display: block
+
+      em
+        text-align: left
 
 footer
   position: absolute
@@ -115,6 +180,9 @@ footer
   p
     display: inline
 
+    @media screen and (max-width: 768px) and (min-width: 321px)
+      margin-left: 60px
+
   .mojotech.logo
     position: absolute
     margin-top: 32px
@@ -122,18 +190,19 @@ footer
     transition-property: transform
     transition-duration: 500ms
 
+    @media screen and (max-width: 768px) and (min-width: 321px)
+      margin-top: 14px
+      margin-left: 2px
+
   &:hover
     .mojotech.logo
       transform: rotate(360deg)
 
-//
+  @media screen and (max-width: 768px)
+    line-height: 65px
 
-.social
-  div, em
-    float: left
-  div
-    opacity: 0.7
-    margin-left: 1em
+    &.bleed:before
+      height: 65px
 
 //
 
@@ -150,6 +219,9 @@ footer
 //
 
 .bleed:before
+  @media screen and (max-width: 768px)
+    height: 128px
+
   content: ''
   height: 100px
   width: 10000px
